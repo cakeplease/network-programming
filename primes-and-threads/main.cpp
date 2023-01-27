@@ -5,6 +5,8 @@
 #include <iostream>
 #include <thread>
 #include <vector>
+#include <cmath>
+
 using namespace std;
 
 bool isPrime(int number) {
@@ -12,7 +14,7 @@ bool isPrime(int number) {
         return false;
     }
 
-    for (int i = 2; i < number; i++) {
+    for (int i = 2; i < sqrt(number); i++) {
         if (number % i == 0) {
             return false;
         }
@@ -54,7 +56,7 @@ int main() {
                 numberpools[threadId].push_back(number);
             }
         }
-
+        
         threads.emplace_back(&findPrimes, &numberpools[threadId], &primepools[threadId]);
     }
 
