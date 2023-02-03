@@ -77,7 +77,7 @@ int main() {
     sort(results.begin(), results.end());
 
     for (auto prime : results) {
-        //cout << prime << " ";
+        cout << prime << " ";
     }
 
     cout << endl;

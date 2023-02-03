@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Kasia/Desktop/networkprogramming/workers/cmake-build-debug",
-		"source" : "C:/Users/Kasia/Desktop/networkprogramming/workers"
+		"build" : "C:/Users/kasia/Desktop/ProjectFiles/network-programming/workers/cmake-build-debug",
+		"source" : "C:/Users/kasia/Desktop/ProjectFiles/network-programming/workers"
 	},
 	"version" : 
 	{

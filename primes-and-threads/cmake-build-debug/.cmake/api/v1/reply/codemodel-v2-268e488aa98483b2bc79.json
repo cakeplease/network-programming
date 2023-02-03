@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Kasia/Desktop/networkprogramming/primes-and-threads/cmake-build-debug",
-		"source" : "C:/Users/Kasia/Desktop/networkprogramming/primes-and-threads"
+		"build" : "C:/Users/kasia/Desktop/ProjectFiles/network-programming/primes-and-threads/cmake-build-debug",
+		"source" : "C:/Users/kasia/Desktop/ProjectFiles/network-programming/primes-and-threads"
 	},
 	"version" : 
 	{

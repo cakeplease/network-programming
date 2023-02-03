@@ -1,3 +1,3 @@
-C:/Users/Kasia/Desktop/networkprogramming/primes-and-threads/cmake-build-debug/CMakeFiles/primes_and_threads.dir
-C:/Users/Kasia/Desktop/networkprogramming/primes-and-threads/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Kasia/Desktop/networkprogramming/primes-and-threads/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/kasia/Desktop/ProjectFiles/network-programming/primes-and-threads/cmake-build-debug/CMakeFiles/primes_and_threads.dir
+C:/Users/kasia/Desktop/ProjectFiles/network-programming/primes-and-threads/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/kasia/Desktop/ProjectFiles/network-programming/primes-and-threads/cmake-build-debug/CMakeFiles/rebuild_cache.dir
