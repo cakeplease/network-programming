@@ -1,0 +1,3 @@
+C:/Users/Kasia/Desktop/networkprogramming/workers/cmake-build-debug/CMakeFiles/workers.dir
+C:/Users/Kasia/Desktop/networkprogramming/workers/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Kasia/Desktop/networkprogramming/workers/cmake-build-debug/CMakeFiles/rebuild_cache.dir

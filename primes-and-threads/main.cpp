@@ -22,6 +22,8 @@ bool isPrime(int number) {
 
     return true;
 }
+
+
 void findPrimes(vector<int> *numbers, vector<int> *results) {
     for (int k = 0; k<numbers->size(); k++) {
         if (isPrime(numbers->at(k))) {
@@ -75,7 +77,7 @@ int main() {
     sort(results.begin(), results.end());
 
     for (auto prime : results) {
-        cout << prime << " ";
+        //cout << prime << " ";
     }
 
     cout << endl;
