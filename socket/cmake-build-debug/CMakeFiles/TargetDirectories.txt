@@ -1,0 +1,3 @@
+C:/Users/kasia/Desktop/ProjectFiles/network-programming/socket/cmake-build-debug/CMakeFiles/socket.dir
+C:/Users/kasia/Desktop/ProjectFiles/network-programming/socket/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/kasia/Desktop/ProjectFiles/network-programming/socket/cmake-build-debug/CMakeFiles/rebuild_cache.dir
