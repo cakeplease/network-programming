@@ -4,6 +4,8 @@
 #include <mutex>
 #include <thread>
 #include <condition_variable>
+#include <atomic>
+#include <vector>
 
 using namespace std;
 
@@ -14,12 +16,17 @@ class Workers {
     vector<thread> worker_threads;
     condition_variable cv;
     condition_variable stopper;
-    bool should_stop = false;
+    bool should_stop;
+    std::vector<std::thread> timeout_handles;
+    std::atomic<int> timeout_handle_counter = 0;
+    bool started;
 
 public:
     Workers(int threadCount) {
         this->threadCount = threadCount;
         this->worker_threads.reserve(threadCount);
+        should_stop = false;
+        started = false;
     }
 
     void start() {
@@ -43,6 +50,7 @@ public:
 
                         if (task) {
                             task();
+                            stopper.notify_one();
                         }
                     }
 
@@ -50,17 +58,30 @@ public:
 
             });
         }
+
+        started = true;
     }
 
     void post(const function<void()> &func) {
-        unique_lock<mutex> lock(this->tasks_mutex);
-        this->tasks.emplace_back(func);
+        if (started) {
+            unique_lock<mutex> lock(this->tasks_mutex);
+            this->tasks.emplace_back(func);
+        }
 
         cv.notify_all();
     }
 
+    void post_timeout(const function<void()> &func, int sleep_ms) {
+        timeout_handle_counter++;
+        timeout_handles.emplace_back([this, sleep_ms, func] {
+            this_thread::sleep_for(chrono::milliseconds(sleep_ms));
+            this->post(func);
+            this->timeout_handle_counter--;
+        });
+    }
+
     bool is_idle() {
-        return this->tasks.empty();
+        return this->tasks.empty() && timeout_handle_counter == 0;
     }
 
     void stop() {
@@ -77,8 +98,10 @@ public:
 
 
         for (auto &thread : this->worker_threads) thread.join();
+        for (auto &handle : this->timeout_handles) handle.join();
 
     }
+
 };
 
 
@@ -88,15 +111,14 @@ int main() {
     worker_threads.start(); // Create 4 internal threads
     event_loop.start(); // Create 1 internal thread
 
-    worker_threads.post([] { cout << "A"; });
-    worker_threads.post([] { cout << "W"; });
-    worker_threads.post([] { cout << "d"; });
-    worker_threads.post([] { cout << "s"; });
-    worker_threads.post([] { cout << "S"; });
+    worker_threads.post([] { cout << "1" << endl; });
+    worker_threads.post_timeout([] { cout << "2" << endl; }, 1000);
+    worker_threads.post_timeout([] { cout << "3" << endl; }, 1000);
+    worker_threads.post_timeout([] { cout << "4" << endl; }, 500);
+    worker_threads.post_timeout([] { cout << "5" << endl; }, 1000);
 
-    event_loop.post([] { cout << "B"; });
-    event_loop.post([] { cout << "C"; });
-    event_loop.post([] { cout << "D"; });
+    event_loop.post_timeout([] { cout << "6" << endl; }, 500);
+    event_loop.post_timeout([] { cout << "7" << endl; }, 1000);
 
 
     worker_threads.stop();
