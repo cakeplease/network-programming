@@ -10,7 +10,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/kasia/network-programming/socket/ClientProcess.cpp" "CMakeFiles/socket.dir/ClientProcess.cpp.o" "gcc" "CMakeFiles/socket.dir/ClientProcess.cpp.o.d"
   "/home/kasia/network-programming/socket/ServerProcess.cpp" "CMakeFiles/socket.dir/ServerProcess.cpp.o" "gcc" "CMakeFiles/socket.dir/ServerProcess.cpp.o.d"
+  "/home/kasia/network-programming/socket/client.cpp" "CMakeFiles/socket.dir/client.cpp.o" "gcc" "CMakeFiles/socket.dir/client.cpp.o.d"
   "/home/kasia/network-programming/socket/main.cpp" "CMakeFiles/socket.dir/main.cpp.o" "gcc" "CMakeFiles/socket.dir/main.cpp.o.d"
+  "/home/kasia/network-programming/socket/server.cpp" "CMakeFiles/socket.dir/server.cpp.o" "gcc" "CMakeFiles/socket.dir/server.cpp.o.d"
+  "/home/kasia/network-programming/socket/test.cpp" "CMakeFiles/socket.dir/test.cpp.o" "gcc" "CMakeFiles/socket.dir/test.cpp.o.d"
   )
 
 # Targets to which this target links.

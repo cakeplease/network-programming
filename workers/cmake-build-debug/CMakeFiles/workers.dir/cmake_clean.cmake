@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/workers.dir/main.cpp.obj"
-  "CMakeFiles/workers.dir/main.cpp.obj.d"
-  "libworkers.dll.a"
-  "workers.exe"
-  "workers.exe.manifest"
+  "CMakeFiles/workers.dir/main.cpp.o"
+  "CMakeFiles/workers.dir/main.cpp.o.d"
+  "workers"
   "workers.pdb"
 )
 

@@ -3,4 +3,5 @@ project(socket)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(socket main.cpp ServerProcess.cpp ClientProcess.cpp)
+add_executable(server ServerProcess.cpp)
+add_executable(client ClientProcess.cpp)

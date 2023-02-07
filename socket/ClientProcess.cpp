@@ -6,7 +6,6 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #include <iostream>
-#define PORT 8080
 
 int main() {
     printf("Hello from the client! Let's try to connect to the socket.\n");
@@ -38,18 +37,26 @@ int main() {
     }
 
     while (!shouldStop) {
-        valread = read(tcp_socket, buffer, 1024);
-        printf("%s\n", buffer);
         std::cin >> input;
-        send(tcp_socket, (void *)input.data(), input.size(), 0);
-        valread = read(tcp_socket, buffer, 1024);
-        printf("%s\n", buffer);
-    }
-    //std::cin >> input;
-    send(tcp_socket, (void *)test, strlen(test), 0);
-    valread = read(tcp_socket, buffer, 1024);
+        if (input == "stop") {
+            shouldStop = true;
+        } else {
+            memset(&buffer, 0, sizeof(buffer));
+            int msg_size = send(tcp_socket, test, sizeof(test), 0);
+            if (msg_size <= 0) {
+                perror("send() failed\n");
+                exit(EXIT_FAILURE);
+            }
 
-    printf("%s\n", buffer);
+            valread = read(tcp_socket, buffer, 1024);
+            if (valread == -1) {
+                perror("read() failed\n");
+                exit(EXIT_FAILURE);
+            }
+            std::cout << buffer << std::endl;
+        }
+    }
+
     close(connection);
     return 0;
 }

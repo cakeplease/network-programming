@@ -117,24 +117,37 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named socket
+# Target rules for targets named server
 
 # Build rule for target.
-socket: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 socket
-.PHONY : socket
+server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-socket/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/socket.dir/build.make CMakeFiles/socket.dir/build
-.PHONY : socket/fast
+server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
+
+#=============================================================================
+# Target rules for targets named client
+
+# Build rule for target.
+client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client
+.PHONY : client
+
+# fast build rule for target.
+client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
+.PHONY : client/fast
 
 ClientProcess.o: ClientProcess.cpp.o
 .PHONY : ClientProcess.o
 
 # target to build an object file
 ClientProcess.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/socket.dir/build.make CMakeFiles/socket.dir/ClientProcess.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/ClientProcess.cpp.o
 .PHONY : ClientProcess.cpp.o
 
 ClientProcess.i: ClientProcess.cpp.i
@@ -142,7 +155,7 @@ ClientProcess.i: ClientProcess.cpp.i
 
 # target to preprocess a source file
 ClientProcess.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/socket.dir/build.make CMakeFiles/socket.dir/ClientProcess.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/ClientProcess.cpp.i
 .PHONY : ClientProcess.cpp.i
 
 ClientProcess.s: ClientProcess.cpp.s
@@ -150,7 +163,7 @@ ClientProcess.s: ClientProcess.cpp.s
 
 # target to generate assembly for a file
 ClientProcess.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/socket.dir/build.make CMakeFiles/socket.dir/ClientProcess.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/ClientProcess.cpp.s
 .PHONY : ClientProcess.cpp.s
 
 ServerProcess.o: ServerProcess.cpp.o
@@ -158,7 +171,7 @@ ServerProcess.o: ServerProcess.cpp.o
 
 # target to build an object file
 ServerProcess.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/socket.dir/build.make CMakeFiles/socket.dir/ServerProcess.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ServerProcess.cpp.o
 .PHONY : ServerProcess.cpp.o
 
 ServerProcess.i: ServerProcess.cpp.i
@@ -166,7 +179,7 @@ ServerProcess.i: ServerProcess.cpp.i
 
 # target to preprocess a source file
 ServerProcess.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/socket.dir/build.make CMakeFiles/socket.dir/ServerProcess.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ServerProcess.cpp.i
 .PHONY : ServerProcess.cpp.i
 
 ServerProcess.s: ServerProcess.cpp.s
@@ -174,32 +187,8 @@ ServerProcess.s: ServerProcess.cpp.s
 
 # target to generate assembly for a file
 ServerProcess.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/socket.dir/build.make CMakeFiles/socket.dir/ServerProcess.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ServerProcess.cpp.s
 .PHONY : ServerProcess.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/socket.dir/build.make CMakeFiles/socket.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/socket.dir/build.make CMakeFiles/socket.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/socket.dir/build.make CMakeFiles/socket.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -209,16 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... socket"
+	@echo "... client"
+	@echo "... server"
 	@echo "... ClientProcess.o"
 	@echo "... ClientProcess.i"
 	@echo "... ClientProcess.s"
 	@echo "... ServerProcess.o"
 	@echo "... ServerProcess.i"
 	@echo "... ServerProcess.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

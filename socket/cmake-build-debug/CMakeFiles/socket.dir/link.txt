@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/socket.dir/main.cpp.o CMakeFiles/socket.dir/ServerProcess.cpp.o CMakeFiles/socket.dir/ClientProcess.cpp.o -o socket 
+/usr/bin/c++ -g CMakeFiles/socket.dir/main.cpp.o CMakeFiles/socket.dir/ServerProcess.cpp.o CMakeFiles/socket.dir/ClientProcess.cpp.o CMakeFiles/socket.dir/test.cpp.o CMakeFiles/socket.dir/client.cpp.o CMakeFiles/socket.dir/server.cpp.o -o socket 

@@ -1,3 +1,3 @@
-C:/Users/kasia/Desktop/ProjectFiles/network-programming/workers/cmake-build-debug/CMakeFiles/workers.dir
-C:/Users/kasia/Desktop/ProjectFiles/network-programming/workers/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/kasia/Desktop/ProjectFiles/network-programming/workers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kasia/network-programming/workers/cmake-build-debug/CMakeFiles/workers.dir
+/home/kasia/network-programming/workers/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kasia/network-programming/workers/cmake-build-debug/CMakeFiles/rebuild_cache.dir

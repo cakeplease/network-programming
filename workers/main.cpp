@@ -40,8 +40,9 @@ public:
                             return this->should_stop || !this->tasks.empty();
                         });
 
-                        if (this->should_stop)
+                        if (this->should_stop) {
                             return;
+                        }
 
                         if (!this->tasks.empty()) {
                             task = *tasks.begin(); // Copy task for later use
@@ -68,7 +69,7 @@ public:
             this->tasks.emplace_back(func);
         }
 
-        cv.notify_all();
+        cv.notify_one();
     }
 
     void post_timeout(const function<void()> &func, int sleep_ms) {
@@ -92,10 +93,8 @@ public:
             });
         }
         //if is_idle returns true, stopper stops calling on the given function and the code below will execute so the program stops
-
         should_stop = true;
         cv.notify_all();
-
 
         for (auto &thread : this->worker_threads) thread.join();
         for (auto &handle : this->timeout_handles) handle.join();
@@ -119,7 +118,6 @@ int main() {
 
     event_loop.post_timeout([] { cout << "6" << endl; }, 500);
     event_loop.post_timeout([] { cout << "7" << endl; }, 1000);
-
 
     worker_threads.stop();
     event_loop.stop();
