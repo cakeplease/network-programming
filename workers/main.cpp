@@ -92,7 +92,7 @@ public:
                 return is_idle();
             });
         }
-        //if is_idle returns true, stopper stops calling on the given function and the code below will execute so the program stops
+        //if is_idle returns true, stopper stops calling on the given funct                                                                              ion and the code below will execute so the program stops
         should_stop = true;
         cv.notify_all();
 

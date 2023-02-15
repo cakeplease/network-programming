@@ -9,7 +9,6 @@
 
 int main() {
     printf("Hello from the client! Let's try to connect to the socket.\n");
-    char* test = "test";
     int valread;
     char buffer[1024] = {0};
     struct sockaddr_in server_address;
@@ -42,7 +41,7 @@ int main() {
             shouldStop = true;
         } else {
             memset(&buffer, 0, sizeof(buffer));
-            int msg_size = send(tcp_socket, test, sizeof(test), 0);
+            int msg_size = send(tcp_socket, &input, sizeof(input), 0);
             if (msg_size <= 0) {
                 perror("send() failed\n");
                 exit(EXIT_FAILURE);
