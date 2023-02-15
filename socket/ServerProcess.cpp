@@ -15,7 +15,6 @@ std::vector<std::thread> threads;
 struct sockaddr_in my_addr, peer_addr;
 
 void doProcessing(int* accepting) {
-    //char* response = "test";
     char buffer[1024];
 
     while (true) {
@@ -27,7 +26,7 @@ void doProcessing(int* accepting) {
 
        std::cout << buffer << std::endl;
 
-       int msg_size = send(*accepting, (void *) buffer, strlen(buffer), 0);
+       int msg_size = send(*accepting, buffer, sizeof(buffer), 0);
        if (msg_size <= 0) {
            perror("send() 2 failed\n");
            exit(EXIT_FAILURE);
