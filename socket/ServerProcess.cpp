@@ -14,30 +14,56 @@ std::vector<std::thread> threads;
 
 struct sockaddr_in my_addr, peer_addr;
 
-void doProcessing(int* accepting) {
+void calculator(int* accepting) {
     char buffer[1024];
 
     while (true) {
-       valread = read(*accepting, buffer, 1024);
-       if (valread == -1) {
-           perror("read() failed\n");
-           exit(EXIT_FAILURE);
-       }
+     valread = read(*accepting, buffer, 1024);
+     if (valread == -1) {
+         perror("read() failed\n");
+         exit(EXIT_FAILURE);
+     }
 
-       std::cout << buffer << std::endl;
+    std::string message((char *)buffer);
 
-       int msg_size = send(*accepting, buffer, sizeof(buffer), 0);
-       if (msg_size <= 0) {
-           perror("send() 2 failed\n");
-           exit(EXIT_FAILURE);
-       }
+    std::string answer_string = "";
+    if (message.find_first_of('+') != std::string::npos) {
+        int number1 = (int)message.front()-48;
+        int number2 = (int)message.back()-48;
+        int answer = number1 + number2;
+        answer_string = std::to_string(answer);
+        std::cout << answer << std::endl;
+    } else if (message.find_first_of('-') != std::string::npos) {
+        int number1 = (int)message.front()-48;
+        int number2 = (int)message.back()-48;
+        int answer = number1 - number2;
+        std::cout << answer << std::endl;
+        answer_string = std::to_string(answer);
+    }
+    int msg_size = send(*accepting, answer_string.c_str(), answer_string.size(), 0);
 
-       memset(&buffer, 0, sizeof(buffer));
-   }
+    if (msg_size <= 0) {
+        perror("send() 2 failed\n");
+        exit(EXIT_FAILURE);
+    }
+
+     memset(&buffer, 0, sizeof(buffer));
+    }
+}
+
+void web(int* accepting) {
+    std::string http_message = "HTTP/1.0 200 OK\n Content-Type: text/html; charset=utf-8\n\n <HTML><BODY>\n<H1> Hilsen. Du har koblet deg opp til min enkle web-tjener </h1>\n<ul>\n<li> ...... </li>\n</ul>\n</BODY></HTML>";
+    int msg_size = send(*accepting, http_message.c_str(), http_message.size(), 0);
+
+    if (msg_size <= 0) {
+        perror("send() 2 failed\n");
+        exit(EXIT_FAILURE);
+    }
+
+    close(*accepting);
 }
 
 int main() {
-
     //Create socket
     if ((tcp_socket = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
         perror("socket() failed\n");
@@ -84,7 +110,8 @@ int main() {
             exit(EXIT_FAILURE);
         } else {
             printf("Accepted a connection.\n");
-            threads.emplace_back(doProcessing, &accepting);
+            //threads.emplace_back(calculator, &accepting);
+            threads.emplace_back(web, &accepting);
         }
 
     }

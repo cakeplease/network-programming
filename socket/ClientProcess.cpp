@@ -10,7 +10,7 @@
 int main() {
     printf("Hello from the client! Let's try to connect to the socket.\n");
     int valread;
-    char buffer[1024] = {0};
+    char buffer[1024];
     struct sockaddr_in server_address;
     server_address.sin_port = htons(8080);
     server_address.sin_family = AF_INET;
@@ -41,7 +41,7 @@ int main() {
             shouldStop = true;
         } else {
             memset(&buffer, 0, sizeof(buffer));
-            int msg_size = send(tcp_socket, &input, sizeof(input), 0);
+            int msg_size = send(tcp_socket, input.c_str(), sizeof(input.c_str()), 0);
             if (msg_size <= 0) {
                 perror("send() failed\n");
                 exit(EXIT_FAILURE);
