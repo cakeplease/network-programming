@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/primes_and_threads.dir/main.cpp.obj"
-  "CMakeFiles/primes_and_threads.dir/main.cpp.obj.d"
-  "libprimes_and_threads.dll.a"
-  "primes_and_threads.exe"
-  "primes_and_threads.exe.manifest"
+  "CMakeFiles/primes_and_threads.dir/main.cpp.o"
+  "CMakeFiles/primes_and_threads.dir/main.cpp.o.d"
+  "primes_and_threads"
   "primes_and_threads.pdb"
 )
 

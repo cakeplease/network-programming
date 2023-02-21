@@ -13,7 +13,7 @@ int main() {
     bool shouldStop = false;
     struct sockaddr_in server_addr;
     socklen_t msg_length;
-    
+
     //IP address of the server we want to send the message to, change this when you don't work locally
     const char* server_ip_address = "127.0.0.1";
 

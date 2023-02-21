@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/kasia/Desktop/ProjectFiles/network-programming/primes-and-threads/main.cpp" "CMakeFiles/primes_and_threads.dir/main.cpp.obj" "gcc" "CMakeFiles/primes_and_threads.dir/main.cpp.obj.d"
+  "/home/kasia/network-programming/primes-and-threads/main.cpp" "CMakeFiles/primes_and_threads.dir/main.cpp.o" "gcc" "CMakeFiles/primes_and_threads.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.
