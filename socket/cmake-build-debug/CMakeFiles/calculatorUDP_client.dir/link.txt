@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/calculatorUDP_client.dir/calculatorUDP/ClientProcess.cpp.o -o calculatorUDP_client 

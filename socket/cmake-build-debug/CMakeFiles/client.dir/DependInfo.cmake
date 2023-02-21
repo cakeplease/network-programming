@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/kasia/network-programming/socket/Calculator.cpp" "CMakeFiles/client.dir/Calculator.cpp.o" "gcc" "CMakeFiles/client.dir/Calculator.cpp.o.d"
   "/home/kasia/network-programming/socket/ClientProcess.cpp" "CMakeFiles/client.dir/ClientProcess.cpp.o" "gcc" "CMakeFiles/client.dir/ClientProcess.cpp.o.d"
   )
 

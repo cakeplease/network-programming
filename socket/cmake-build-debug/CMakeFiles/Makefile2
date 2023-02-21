@@ -63,8 +63,12 @@ CMAKE_BINARY_DIR = /home/kasia/network-programming/socket/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/server.dir/all
-all: CMakeFiles/client.dir/all
+all: CMakeFiles/calculatorTCP_server.dir/all
+all: CMakeFiles/calculatorTCP_client.dir/all
+all: CMakeFiles/calculatorUDP_server.dir/all
+all: CMakeFiles/calculatorUDP_client.dir/all
+all: CMakeFiles/webTCP_server.dir/all
+all: CMakeFiles/webTCP_client.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,61 +76,169 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/server.dir/clean
-clean: CMakeFiles/client.dir/clean
+clean: CMakeFiles/calculatorTCP_server.dir/clean
+clean: CMakeFiles/calculatorTCP_client.dir/clean
+clean: CMakeFiles/calculatorUDP_server.dir/clean
+clean: CMakeFiles/calculatorUDP_client.dir/clean
+clean: CMakeFiles/webTCP_server.dir/clean
+clean: CMakeFiles/webTCP_client.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/server.dir
+# Target rules for target CMakeFiles/calculatorTCP_server.dir
 
 # All Build rule for target.
-CMakeFiles/server.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target server"
-.PHONY : CMakeFiles/server.dir/all
+CMakeFiles/calculatorTCP_server.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_server.dir/build.make CMakeFiles/calculatorTCP_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_server.dir/build.make CMakeFiles/calculatorTCP_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target calculatorTCP_server"
+.PHONY : CMakeFiles/calculatorTCP_server.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/server.dir/rule: cmake_check_build_system
+CMakeFiles/calculatorTCP_server.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/server.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/calculatorTCP_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/server.dir/rule
+.PHONY : CMakeFiles/calculatorTCP_server.dir/rule
 
 # Convenience name for target.
-server: CMakeFiles/server.dir/rule
-.PHONY : server
+calculatorTCP_server: CMakeFiles/calculatorTCP_server.dir/rule
+.PHONY : calculatorTCP_server
 
 # clean rule for target.
-CMakeFiles/server.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/clean
-.PHONY : CMakeFiles/server.dir/clean
+CMakeFiles/calculatorTCP_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_server.dir/build.make CMakeFiles/calculatorTCP_server.dir/clean
+.PHONY : CMakeFiles/calculatorTCP_server.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/client.dir
+# Target rules for target CMakeFiles/calculatorTCP_client.dir
 
 # All Build rule for target.
-CMakeFiles/client.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target client"
-.PHONY : CMakeFiles/client.dir/all
+CMakeFiles/calculatorTCP_client.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_client.dir/build.make CMakeFiles/calculatorTCP_client.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_client.dir/build.make CMakeFiles/calculatorTCP_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target calculatorTCP_client"
+.PHONY : CMakeFiles/calculatorTCP_client.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/client.dir/rule: cmake_check_build_system
+CMakeFiles/calculatorTCP_client.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/client.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/calculatorTCP_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/client.dir/rule
+.PHONY : CMakeFiles/calculatorTCP_client.dir/rule
 
 # Convenience name for target.
-client: CMakeFiles/client.dir/rule
-.PHONY : client
+calculatorTCP_client: CMakeFiles/calculatorTCP_client.dir/rule
+.PHONY : calculatorTCP_client
 
 # clean rule for target.
-CMakeFiles/client.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/clean
-.PHONY : CMakeFiles/client.dir/clean
+CMakeFiles/calculatorTCP_client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_client.dir/build.make CMakeFiles/calculatorTCP_client.dir/clean
+.PHONY : CMakeFiles/calculatorTCP_client.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/calculatorUDP_server.dir
+
+# All Build rule for target.
+CMakeFiles/calculatorUDP_server.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_server.dir/build.make CMakeFiles/calculatorUDP_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_server.dir/build.make CMakeFiles/calculatorUDP_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target calculatorUDP_server"
+.PHONY : CMakeFiles/calculatorUDP_server.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/calculatorUDP_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/calculatorUDP_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/calculatorUDP_server.dir/rule
+
+# Convenience name for target.
+calculatorUDP_server: CMakeFiles/calculatorUDP_server.dir/rule
+.PHONY : calculatorUDP_server
+
+# clean rule for target.
+CMakeFiles/calculatorUDP_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_server.dir/build.make CMakeFiles/calculatorUDP_server.dir/clean
+.PHONY : CMakeFiles/calculatorUDP_server.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/calculatorUDP_client.dir
+
+# All Build rule for target.
+CMakeFiles/calculatorUDP_client.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_client.dir/build.make CMakeFiles/calculatorUDP_client.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_client.dir/build.make CMakeFiles/calculatorUDP_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target calculatorUDP_client"
+.PHONY : CMakeFiles/calculatorUDP_client.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/calculatorUDP_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/calculatorUDP_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/calculatorUDP_client.dir/rule
+
+# Convenience name for target.
+calculatorUDP_client: CMakeFiles/calculatorUDP_client.dir/rule
+.PHONY : calculatorUDP_client
+
+# clean rule for target.
+CMakeFiles/calculatorUDP_client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_client.dir/build.make CMakeFiles/calculatorUDP_client.dir/clean
+.PHONY : CMakeFiles/calculatorUDP_client.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/webTCP_server.dir
+
+# All Build rule for target.
+CMakeFiles/webTCP_server.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_server.dir/build.make CMakeFiles/webTCP_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_server.dir/build.make CMakeFiles/webTCP_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target webTCP_server"
+.PHONY : CMakeFiles/webTCP_server.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/webTCP_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/webTCP_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/webTCP_server.dir/rule
+
+# Convenience name for target.
+webTCP_server: CMakeFiles/webTCP_server.dir/rule
+.PHONY : webTCP_server
+
+# clean rule for target.
+CMakeFiles/webTCP_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_server.dir/build.make CMakeFiles/webTCP_server.dir/clean
+.PHONY : CMakeFiles/webTCP_server.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/webTCP_client.dir
+
+# All Build rule for target.
+CMakeFiles/webTCP_client.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_client.dir/build.make CMakeFiles/webTCP_client.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_client.dir/build.make CMakeFiles/webTCP_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target webTCP_client"
+.PHONY : CMakeFiles/webTCP_client.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/webTCP_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/webTCP_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/webTCP_client.dir/rule
+
+# Convenience name for target.
+webTCP_client: CMakeFiles/webTCP_client.dir/rule
+.PHONY : webTCP_client
+
+# clean rule for target.
+CMakeFiles/webTCP_client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_client.dir/build.make CMakeFiles/webTCP_client.dir/clean
+.PHONY : CMakeFiles/webTCP_client.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

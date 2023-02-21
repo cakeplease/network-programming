@@ -117,78 +117,226 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named server
+# Target rules for targets named calculatorTCP_server
 
 # Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
-.PHONY : server
+calculatorTCP_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calculatorTCP_server
+.PHONY : calculatorTCP_server
 
 # fast build rule for target.
-server/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-.PHONY : server/fast
+calculatorTCP_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_server.dir/build.make CMakeFiles/calculatorTCP_server.dir/build
+.PHONY : calculatorTCP_server/fast
 
 #=============================================================================
-# Target rules for targets named client
+# Target rules for targets named calculatorTCP_client
 
 # Build rule for target.
-client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client
-.PHONY : client
+calculatorTCP_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calculatorTCP_client
+.PHONY : calculatorTCP_client
 
 # fast build rule for target.
-client/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
-.PHONY : client/fast
+calculatorTCP_client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_client.dir/build.make CMakeFiles/calculatorTCP_client.dir/build
+.PHONY : calculatorTCP_client/fast
 
-ClientProcess.o: ClientProcess.cpp.o
-.PHONY : ClientProcess.o
+#=============================================================================
+# Target rules for targets named calculatorUDP_server
+
+# Build rule for target.
+calculatorUDP_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calculatorUDP_server
+.PHONY : calculatorUDP_server
+
+# fast build rule for target.
+calculatorUDP_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_server.dir/build.make CMakeFiles/calculatorUDP_server.dir/build
+.PHONY : calculatorUDP_server/fast
+
+#=============================================================================
+# Target rules for targets named calculatorUDP_client
+
+# Build rule for target.
+calculatorUDP_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calculatorUDP_client
+.PHONY : calculatorUDP_client
+
+# fast build rule for target.
+calculatorUDP_client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_client.dir/build.make CMakeFiles/calculatorUDP_client.dir/build
+.PHONY : calculatorUDP_client/fast
+
+#=============================================================================
+# Target rules for targets named webTCP_server
+
+# Build rule for target.
+webTCP_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webTCP_server
+.PHONY : webTCP_server
+
+# fast build rule for target.
+webTCP_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_server.dir/build.make CMakeFiles/webTCP_server.dir/build
+.PHONY : webTCP_server/fast
+
+#=============================================================================
+# Target rules for targets named webTCP_client
+
+# Build rule for target.
+webTCP_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webTCP_client
+.PHONY : webTCP_client
+
+# fast build rule for target.
+webTCP_client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_client.dir/build.make CMakeFiles/webTCP_client.dir/build
+.PHONY : webTCP_client/fast
+
+calculatorTCP/ClientProcess.o: calculatorTCP/ClientProcess.cpp.o
+.PHONY : calculatorTCP/ClientProcess.o
 
 # target to build an object file
-ClientProcess.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/ClientProcess.cpp.o
-.PHONY : ClientProcess.cpp.o
+calculatorTCP/ClientProcess.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_client.dir/build.make CMakeFiles/calculatorTCP_client.dir/calculatorTCP/ClientProcess.cpp.o
+.PHONY : calculatorTCP/ClientProcess.cpp.o
 
-ClientProcess.i: ClientProcess.cpp.i
-.PHONY : ClientProcess.i
+calculatorTCP/ClientProcess.i: calculatorTCP/ClientProcess.cpp.i
+.PHONY : calculatorTCP/ClientProcess.i
 
 # target to preprocess a source file
-ClientProcess.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/ClientProcess.cpp.i
-.PHONY : ClientProcess.cpp.i
+calculatorTCP/ClientProcess.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_client.dir/build.make CMakeFiles/calculatorTCP_client.dir/calculatorTCP/ClientProcess.cpp.i
+.PHONY : calculatorTCP/ClientProcess.cpp.i
 
-ClientProcess.s: ClientProcess.cpp.s
-.PHONY : ClientProcess.s
+calculatorTCP/ClientProcess.s: calculatorTCP/ClientProcess.cpp.s
+.PHONY : calculatorTCP/ClientProcess.s
 
 # target to generate assembly for a file
-ClientProcess.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/ClientProcess.cpp.s
-.PHONY : ClientProcess.cpp.s
+calculatorTCP/ClientProcess.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_client.dir/build.make CMakeFiles/calculatorTCP_client.dir/calculatorTCP/ClientProcess.cpp.s
+.PHONY : calculatorTCP/ClientProcess.cpp.s
 
-ServerProcess.o: ServerProcess.cpp.o
-.PHONY : ServerProcess.o
+calculatorTCP/ServerProcess.o: calculatorTCP/ServerProcess.cpp.o
+.PHONY : calculatorTCP/ServerProcess.o
 
 # target to build an object file
-ServerProcess.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ServerProcess.cpp.o
-.PHONY : ServerProcess.cpp.o
+calculatorTCP/ServerProcess.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_server.dir/build.make CMakeFiles/calculatorTCP_server.dir/calculatorTCP/ServerProcess.cpp.o
+.PHONY : calculatorTCP/ServerProcess.cpp.o
 
-ServerProcess.i: ServerProcess.cpp.i
-.PHONY : ServerProcess.i
+calculatorTCP/ServerProcess.i: calculatorTCP/ServerProcess.cpp.i
+.PHONY : calculatorTCP/ServerProcess.i
 
 # target to preprocess a source file
-ServerProcess.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ServerProcess.cpp.i
-.PHONY : ServerProcess.cpp.i
+calculatorTCP/ServerProcess.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_server.dir/build.make CMakeFiles/calculatorTCP_server.dir/calculatorTCP/ServerProcess.cpp.i
+.PHONY : calculatorTCP/ServerProcess.cpp.i
 
-ServerProcess.s: ServerProcess.cpp.s
-.PHONY : ServerProcess.s
+calculatorTCP/ServerProcess.s: calculatorTCP/ServerProcess.cpp.s
+.PHONY : calculatorTCP/ServerProcess.s
 
 # target to generate assembly for a file
-ServerProcess.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ServerProcess.cpp.s
-.PHONY : ServerProcess.cpp.s
+calculatorTCP/ServerProcess.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorTCP_server.dir/build.make CMakeFiles/calculatorTCP_server.dir/calculatorTCP/ServerProcess.cpp.s
+.PHONY : calculatorTCP/ServerProcess.cpp.s
+
+calculatorUDP/ClientProcess.o: calculatorUDP/ClientProcess.cpp.o
+.PHONY : calculatorUDP/ClientProcess.o
+
+# target to build an object file
+calculatorUDP/ClientProcess.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_client.dir/build.make CMakeFiles/calculatorUDP_client.dir/calculatorUDP/ClientProcess.cpp.o
+.PHONY : calculatorUDP/ClientProcess.cpp.o
+
+calculatorUDP/ClientProcess.i: calculatorUDP/ClientProcess.cpp.i
+.PHONY : calculatorUDP/ClientProcess.i
+
+# target to preprocess a source file
+calculatorUDP/ClientProcess.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_client.dir/build.make CMakeFiles/calculatorUDP_client.dir/calculatorUDP/ClientProcess.cpp.i
+.PHONY : calculatorUDP/ClientProcess.cpp.i
+
+calculatorUDP/ClientProcess.s: calculatorUDP/ClientProcess.cpp.s
+.PHONY : calculatorUDP/ClientProcess.s
+
+# target to generate assembly for a file
+calculatorUDP/ClientProcess.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_client.dir/build.make CMakeFiles/calculatorUDP_client.dir/calculatorUDP/ClientProcess.cpp.s
+.PHONY : calculatorUDP/ClientProcess.cpp.s
+
+calculatorUDP/ServerProcess.o: calculatorUDP/ServerProcess.cpp.o
+.PHONY : calculatorUDP/ServerProcess.o
+
+# target to build an object file
+calculatorUDP/ServerProcess.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_server.dir/build.make CMakeFiles/calculatorUDP_server.dir/calculatorUDP/ServerProcess.cpp.o
+.PHONY : calculatorUDP/ServerProcess.cpp.o
+
+calculatorUDP/ServerProcess.i: calculatorUDP/ServerProcess.cpp.i
+.PHONY : calculatorUDP/ServerProcess.i
+
+# target to preprocess a source file
+calculatorUDP/ServerProcess.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_server.dir/build.make CMakeFiles/calculatorUDP_server.dir/calculatorUDP/ServerProcess.cpp.i
+.PHONY : calculatorUDP/ServerProcess.cpp.i
+
+calculatorUDP/ServerProcess.s: calculatorUDP/ServerProcess.cpp.s
+.PHONY : calculatorUDP/ServerProcess.s
+
+# target to generate assembly for a file
+calculatorUDP/ServerProcess.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatorUDP_server.dir/build.make CMakeFiles/calculatorUDP_server.dir/calculatorUDP/ServerProcess.cpp.s
+.PHONY : calculatorUDP/ServerProcess.cpp.s
+
+webTCP/ClientProcess.o: webTCP/ClientProcess.cpp.o
+.PHONY : webTCP/ClientProcess.o
+
+# target to build an object file
+webTCP/ClientProcess.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_client.dir/build.make CMakeFiles/webTCP_client.dir/webTCP/ClientProcess.cpp.o
+.PHONY : webTCP/ClientProcess.cpp.o
+
+webTCP/ClientProcess.i: webTCP/ClientProcess.cpp.i
+.PHONY : webTCP/ClientProcess.i
+
+# target to preprocess a source file
+webTCP/ClientProcess.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_client.dir/build.make CMakeFiles/webTCP_client.dir/webTCP/ClientProcess.cpp.i
+.PHONY : webTCP/ClientProcess.cpp.i
+
+webTCP/ClientProcess.s: webTCP/ClientProcess.cpp.s
+.PHONY : webTCP/ClientProcess.s
+
+# target to generate assembly for a file
+webTCP/ClientProcess.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_client.dir/build.make CMakeFiles/webTCP_client.dir/webTCP/ClientProcess.cpp.s
+.PHONY : webTCP/ClientProcess.cpp.s
+
+webTCP/ServerProcess.o: webTCP/ServerProcess.cpp.o
+.PHONY : webTCP/ServerProcess.o
+
+# target to build an object file
+webTCP/ServerProcess.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_server.dir/build.make CMakeFiles/webTCP_server.dir/webTCP/ServerProcess.cpp.o
+.PHONY : webTCP/ServerProcess.cpp.o
+
+webTCP/ServerProcess.i: webTCP/ServerProcess.cpp.i
+.PHONY : webTCP/ServerProcess.i
+
+# target to preprocess a source file
+webTCP/ServerProcess.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_server.dir/build.make CMakeFiles/webTCP_server.dir/webTCP/ServerProcess.cpp.i
+.PHONY : webTCP/ServerProcess.cpp.i
+
+webTCP/ServerProcess.s: webTCP/ServerProcess.cpp.s
+.PHONY : webTCP/ServerProcess.s
+
+# target to generate assembly for a file
+webTCP/ServerProcess.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTCP_server.dir/build.make CMakeFiles/webTCP_server.dir/webTCP/ServerProcess.cpp.s
+.PHONY : webTCP/ServerProcess.cpp.s
 
 # Help Target
 help:
@@ -198,14 +346,30 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... client"
-	@echo "... server"
-	@echo "... ClientProcess.o"
-	@echo "... ClientProcess.i"
-	@echo "... ClientProcess.s"
-	@echo "... ServerProcess.o"
-	@echo "... ServerProcess.i"
-	@echo "... ServerProcess.s"
+	@echo "... calculatorTCP_client"
+	@echo "... calculatorTCP_server"
+	@echo "... calculatorUDP_client"
+	@echo "... calculatorUDP_server"
+	@echo "... webTCP_client"
+	@echo "... webTCP_server"
+	@echo "... calculatorTCP/ClientProcess.o"
+	@echo "... calculatorTCP/ClientProcess.i"
+	@echo "... calculatorTCP/ClientProcess.s"
+	@echo "... calculatorTCP/ServerProcess.o"
+	@echo "... calculatorTCP/ServerProcess.i"
+	@echo "... calculatorTCP/ServerProcess.s"
+	@echo "... calculatorUDP/ClientProcess.o"
+	@echo "... calculatorUDP/ClientProcess.i"
+	@echo "... calculatorUDP/ClientProcess.s"
+	@echo "... calculatorUDP/ServerProcess.o"
+	@echo "... calculatorUDP/ServerProcess.i"
+	@echo "... calculatorUDP/ServerProcess.s"
+	@echo "... webTCP/ClientProcess.o"
+	@echo "... webTCP/ClientProcess.i"
+	@echo "... webTCP/ClientProcess.s"
+	@echo "... webTCP/ServerProcess.o"
+	@echo "... webTCP/ServerProcess.i"
+	@echo "... webTCP/ServerProcess.s"
 .PHONY : help
 
 

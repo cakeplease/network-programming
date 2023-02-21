@@ -1,4 +1,8 @@
-/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles/server.dir
-/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles/client.dir
+/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles/calculatorTCP_server.dir
+/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles/calculatorTCP_client.dir
+/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles/calculatorUDP_server.dir
+/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles/calculatorUDP_client.dir
+/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles/webTCP_server.dir
+/home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles/webTCP_client.dir
 /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/kasia/network-programming/socket/cmake-build-debug/CMakeFiles/rebuild_cache.dir
