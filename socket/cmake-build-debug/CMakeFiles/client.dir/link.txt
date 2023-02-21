@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/client.dir/ClientProcess.cpp.o CMakeFiles/client.dir/Calculator.cpp.o -o client 

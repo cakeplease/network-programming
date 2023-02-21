@@ -1,3 +1,0 @@
-/home/kasia/network-programming/primes-and-threads/cmake-build-debug/CMakeFiles/primes_and_threads.dir
-/home/kasia/network-programming/primes-and-threads/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/kasia/network-programming/primes-and-threads/cmake-build-debug/CMakeFiles/rebuild_cache.dir

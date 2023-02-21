@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/calculatorTCP_client.dir/calculatorTCP/ClientProcess.cpp.o -o calculatorTCP_client 

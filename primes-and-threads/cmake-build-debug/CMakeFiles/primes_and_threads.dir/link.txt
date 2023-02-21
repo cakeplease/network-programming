@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -Wall -Wextra -g CMakeFiles/primes_and_threads.dir/main.cpp.o -o primes_and_threads 
