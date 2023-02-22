@@ -11,3 +11,6 @@ add_executable(calculatorUDP_client calculatorUDP/ClientProcess.cpp)
 
 add_executable(webTCP_server webTCP/ServerProcess.cpp)
 add_executable(webTCP_client webTCP/ClientProcess.cpp)
+
+add_executable(tls_server TLS/ServerProcess.cpp)
+add_executable(tls_client TLS/ClientProcess.cpp)
