@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compilator</title>
+</head>
+<body>
+<form id="code-form" onsubmit="handleRequest()">
+    <label for="code">Code to compile:</label>
+    <textarea id="code" name="code"><?php WRITE_YOUR_CODE_HERE;?></textarea>
+    <button type="submit">Compile and run</button>
+</form>
+</body>
+</html>
+<style>
+    label, textarea, button {
+        display: block;
+        margin-bottom: 20px;
+    }
+    textarea {
+        width: 350px;
+        height: 200px;
+    }
+</style>
+<script>
+    function handleRequest() {
+        this.event.preventDefault();
+        const formData = new FormData();
+        const fileField = document.getElementById("code").value;
+
+        formData.set("code", fileField);
+
+        /*const request = new Request("http://localhost:5000/index.php", {
+            method: "POST",
+            body: formData,
+        });*/
+
+       fetch('http://localhost:5000/index.php', {
+           body: formData,
+           method: "POST",
+       })
+       .then((response) => response.json())
+       .then((data) => {
+           console.log("Success:", data);
+       })
+       .catch((error) => {
+           console.error("Error:", error);
+       });
+
+    }
+</script>
