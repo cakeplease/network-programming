@@ -13,16 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dce91398-2470-4930-b13e-cea3f5e15a08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/compile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler_docker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler_docker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket/webTCP/ServerProcess.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../socket/webTCP/ServerProcess.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +92,8 @@
       <workItem from="1678106382039" duration="606000" />
       <workItem from="1678107170814" duration="82000" />
       <workItem from="1678107254006" duration="11120000" />
+      <workItem from="1678175173735" duration="2434000" />
+      <workItem from="1678187868942" duration="263000" />
     </task>
     <servers />
   </component>

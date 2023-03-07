@@ -5,10 +5,11 @@
 </head>
 <body>
 <form id="code-form" onsubmit="handleRequest()">
-    <label for="code">Code to compile:</label>
+    <label for="code">PHP code to compile:</label>
     <textarea id="code" name="code"><?php WRITE_YOUR_CODE_HERE;?></textarea>
     <button type="submit">Compile and run</button>
 </form>
+<div id="output-box"></div>
 </body>
 </html>
 <style>
@@ -29,18 +30,17 @@
 
         formData.set("code", fileField);
 
-        /*const request = new Request("http://localhost:5000/index.php", {
-            method: "POST",
-            body: formData,
-        });*/
-
        fetch('http://localhost:5000/index.php', {
            body: formData,
            method: "POST",
        })
        .then((response) => response.json())
        .then((data) => {
-           console.log("Success:", data);
+           if (data.status === 'success') {
+               document.getElementById('output-box').innerHTML = "<p>"+data.result+"</p>";
+           } else {
+               document.getElementById('output-box').innerHTML = "<p>"+"Something went wrong: "+data.result+"</p>";
+           }
        })
        .catch((error) => {
            console.error("Error:", error);
